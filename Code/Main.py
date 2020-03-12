@@ -65,8 +65,7 @@ def allocatePostiToPeople(matrixOfPosti, listOfDevelopers, listOfManagers):
                 if posto.D_or_PM == "D":
                     for developer in listOfDevelopers:
                         # NB: il vincolo corretto è >=1 e <=100
-                        # if developer.free == True and len(developer.skills) >= 1 and len(developer.skills) <= 100:
-                        if developer.free == True and len(developer.skills) >= 10 and len(developer.skills) <= 100:
+                        if developer.free == True and len(developer.skills) >= 1 and len(developer.skills) <= 100:
                             developer.free = False
                             developer.x = i
                             developer.y = j
@@ -174,7 +173,7 @@ def main():
     # listOfManagers=[[],[]]
 
     # read input file
-    in_file = "f_glitch"
+    in_file = "a_solar"
     w, h, seats, listOfDevelopers, listOfManagers = parse_file("input\\" + in_file + ".txt")
 
     # create matrix of posti
